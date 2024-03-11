@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class ="container">
+{% for car in cars %}
+<!-- <div class="card" >
+    <a href="{% url 'detail' car.id %}">{{car.brand}}: {{car.model}}</a>
+</div> -->
+<div class="alert alert-secondary" role="alert">
+    <a href="{% url 'detail' car.id %}">{{car.brand}}: {{car.model}}</a>
+  </div>
+{% endfor %}
+</div>
+{% endblock %}

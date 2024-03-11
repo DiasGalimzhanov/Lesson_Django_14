@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card p-4">
+    <h5> Brand:   {{ car.brand }}</h5>
+    <h6> Model:   {{ car.model }}</h6>
+    <p> Year:     {{ car.year }}</p>
+    <p> Color:    {{ car.color }}</p>
+    <a href="{% url 'update' car.id %}">Update</a>
+    <a href="{% url 'delete' car.id %}">Delete</a>
+</div>
+{% endblock %}
